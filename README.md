@@ -14,7 +14,7 @@ Esta iniciativa está recogida dentro de la medida “Formación para el Empleo�
 
 #### Syllabus
 
-| Semana | Topicos |
+| Semana | Tópicos |
 |:----:|--------|
 | 0 | Introducción al curso y al programa “Diseño de servicios en la nube para acceso movil con HTML5” |
 | 1 | Introducción a Internet, el Web, la nube, HTML5 y CSS |
