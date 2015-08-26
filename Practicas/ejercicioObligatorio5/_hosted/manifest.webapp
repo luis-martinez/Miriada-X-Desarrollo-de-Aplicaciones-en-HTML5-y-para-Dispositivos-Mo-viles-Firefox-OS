@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "name": "Geo",
+  "description": "Geolocalización",
+  "launch_path": "/host/0B_x_RWfqAti7d1ZkUTQ3ZnVrb2c/hosted/index.html",
+  "icons": {
+    "16":  "/host/0B_x_RWfqAti7d1ZkUTQ3ZnVrb2c/hosted/icon-16.png",
+    "48":  "/host/0B_x_RWfqAti7d1ZkUTQ3ZnVrb2c/hosted/icon-48.png",
+    "128": "/host/0B_x_RWfqAti7d1ZkUTQ3ZnVrb2c/hosted/icon-128.png"
+  },
+  "developer": {
+    "name": "Alumno"
+  },
+  "permissions": {
+    "geolocation": {
+      "description": "Required to show your current location."
+    },
+    "storage": {
+      "description": "Improves performance by caching some data locally."
+    }
+  }   
+}

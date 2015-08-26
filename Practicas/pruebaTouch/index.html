@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cronometro</title>
+	<script type="text/javascript" src="zepto.min.js"></script>
+	<script type="text/javascript" src="touch.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var t, cl = $("#crono");
+			var lista = $("#lista");
+			var cadena = "";
+			var cuerpo = $("#cuerpo");
+
+			function mostrar(){
+				cl.html((+cl.html() + 0.01).toFixed(2));
+			};
+
+			function arrancar(){
+				t=setInterval(mostrar, 10);
+			};
+
+			function parar(){
+				clearInterval(t); 
+				t=undefined;
+			};
+
+			function cambiar(){
+				if (!t){
+					arrancar();
+				}else{
+					parar();
+					cadena = cadena + '<br>' + cl.html();
+					lista.html(cadena);
+				}
+			};
+
+			function inicializar(){
+				if (!t){
+						cl.html("0.00");
+						cadena = "";
+						lista.html(cadena);
+					}
+			}
+
+			cuerpo.on('tap',cambiar);
+
+			cuerpo.on('swipe', inicializar);
+		});
+	</script>
+</head>
+<body>
+	<div id="cuerpo">
+	<h2>Cronómetro</h2>
+
+	<h2><span id="crono">0.00</span> segundos</h2>
+
+	<div><span id="lista"></span></div>
+	<div>
+</body>
+</html>

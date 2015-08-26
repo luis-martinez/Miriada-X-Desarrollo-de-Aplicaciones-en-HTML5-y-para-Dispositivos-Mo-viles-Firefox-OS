@@ -1,0 +1,15 @@
+
+@import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
+
+@font-face{
+    font-family: 'FiraMonoOT';
+    src: local(FiraMonoOT-Regular),
+        url(FiraMonoOT-Regular.otf);
+}
+.fuenteFirefox {
+    font-family: FiraMonoOT;
+}
+
+.fuenteGoogle {
+    font-family: 'Berkshire Swash', cursive;
+}

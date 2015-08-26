@@ -1,0 +1,50 @@
+@font-face{
+    font-family: 'FiraSansOT-Regular';
+    src: local(FiraSansOT-Regular),
+        url(FiraSansOT-Regular.otf);
+}
+
+html{
+    font-family: FiraSansOT-Regular;
+    background-color: #70b9d9;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+    height: 3.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    background: #95e279;
+}
+
+#gestos{
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#cambiar, #inicializar{
+    padding: .75rem;
+    background-color: #76d073;
+    font-size: 1.3rem;
+    border: 1px solid #000;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+li{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: #76d073;
+    font-size: 1.5rem;
+}

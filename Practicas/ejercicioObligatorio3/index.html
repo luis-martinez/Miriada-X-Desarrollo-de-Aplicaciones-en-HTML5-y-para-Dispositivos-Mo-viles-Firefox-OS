@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Ejercicio Obligatorio 3</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+    <body>
+        <h1>Propiedades del Objeto DOM location</h1>
+        <!-- Tabla con las propiedades de location -->
+        <table>
+            <!-- Encabezado de la tabla -->
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Valor de la propiedad</th>
+                </tr>
+            </thead>
+            <!-- Cuerpo de la tabla -->
+            <tbody id="tablaCuerpo"></tbody>
+        </table>
+        <!-- Código JavaScript -->
+        <script type="text/javascript">
+            // Crea variable 'tabla' con el objeto de 'document' asociado al elemento de la página HTML con el identificador 'tablaCuerpo'
+            var tabla = document.getElementById("tablaCuerpo");
+            // Crea variable 'i' (índice) inicializada a 0
+            var i = 0;
+            // Crea variable 'valor' inicializada a 0
+            var valor = 0;
+            // Bucle en el que genera cada unas de las filas de la tabla
+            for (i in location){
+                    // Si el valor de location es de tipo 'string'
+                    if (typeof(location[i])==="string"){
+                        valor = location[i];
+                    }
+                    // En caso sontrario, si el valor de location no es de tipo 'string'
+                    else{
+                        valor = "No es imprimible";
+                    }
+                    // Escribe la fila en la tabla
+                    tabla.innerHTML+="<tr><td>"+i+"</td><td>"+ valor +"</td></tr>";
+            }
+        </script>
+    </body>
+</html>

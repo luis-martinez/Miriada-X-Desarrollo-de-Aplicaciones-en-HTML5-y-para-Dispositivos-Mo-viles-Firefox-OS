@@ -1,0 +1,42 @@
+@font-face{
+    font-family: 'FiraSansOT-Regular';
+    src: local(FiraSansOT-Regular),
+        url(FiraSansOT-Regular.otf);
+}
+
+html{
+    font-family: FiraSansOT-Regular;
+    background-color: #b7b7d1;
+}
+
+body{
+    margin: 0;
+	padding: 0;
+	height: 100%;
+    width: 100%;
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+table{
+    font-size: 1.2rem;
+    margin: auto;
+}
+
+th{
+    padding: 0.5rem;
+    text-align: left;
+}
+
+tr{
+    padding: 0.5rem;
+    background-color: #76d073;
+}
+
+td{
+    padding: 0.5rem;
+    background-color: #6bbaa5;
+}

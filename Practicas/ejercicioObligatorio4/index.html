@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cronómetro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="zepto.min.js" > </script>
+        <script type="text/javascript" src="touch.js" > </script>
+    
+        <script type="text/javascript">
+            $(function(){
+                localStorage.c = (localStorage.c || "0.00");
+                localStorage.l = (localStorage.l || "");
+                
+                var t, cl = $("#crono");
+                var lista = $("#lista");
+                
+                function incr(){ 
+                    localStorage.c = +localStorage.c + 0.01; 
+                }
+                
+                function mostrar(){ 
+                    cl.html((+localStorage.c).toFixed(2));
+                    lista.html(localStorage.l);
+                };
+                
+                function arrancar(){
+                    t=setInterval(function(){incr(); mostrar()}, 10);
+                };
+                
+                function parar(){ 
+                    clearInterval(t);  
+                    t=undefined; 
+                    listar(); 
+                };
+                
+                function cambiar(){ 
+                    if (!t) 
+                        arrancar(); 
+                    else 
+                        parar(); 
+                };
+                
+                function listar(){ 
+                    var linea = "<li>"+(+localStorage.c).toFixed(2)+" segundos"+ "</li>";
+                    localStorage.l += linea;
+                    lista.append(linea);
+                };
+                
+                function inicializar(){ 
+                    if (!t){
+                        localStorage.c = "0.00";  
+                        localStorage.l = "";
+                        mostrar();            
+                    }
+                };
+                
+                $("#cambiar").on('click', cambiar);
+                $("#inicializar").on('click', inicializar);    
+                $("#gestos").on('tap',cambiar);
+                $("#gestos").on('swipe', inicializar);  
+                $("#cambiar").on('tap', function () { return false }); 
+                $("#inicializar").on('tap', function () { return false });
+                
+                mostrar();
+            });
+        </script>
+    </head>
+    <body> 
+        <div id="gestos">
+            <h1>Cronómetro</h1>
+            <h2><span id="crono"> 0.00 </span> segundos </h2>
+            <button type="button" id="cambiar"> arrancar/parar </button>
+            <button type="button" id="inicializar">  inicializar </button>
+            <h3>Tiempos:</h3>
+            <ul id="lista"></ul>
+        </div>
+    </body>
+</html>

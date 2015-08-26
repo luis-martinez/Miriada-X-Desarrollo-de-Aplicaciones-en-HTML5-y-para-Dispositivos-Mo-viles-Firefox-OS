@@ -1,0 +1,71 @@
+@font-face{
+  font-family: 'FiraSansOT-Regular';
+  src: local(FiraSansOT-Regular),
+        url(FiraSansOT-Regular.otf);
+}
+
+html{
+  background: #1c2224;
+}
+
+body{
+  font-family: 'FiraSansOT-Regular', 'Droid Sans', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header{
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  color: #e7e7e7;
+}
+
+h1{
+  font-size: 24px;
+  font-weight: 400;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  margin: 0;
+  left: 20px;
+  padding: 0;
+  
+}
+
+#limpiar{
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute; /* posición absoluta a navegador */
+  top: 0;             /* ajusta a borde de navegador */
+  right: 0;
+  height: 50px;
+  width: 30%;
+  padding: 0;
+  background-color: #76d073;
+  font-size: 24px;
+  border: 1px solid #000;
+}
+
+#map{
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute; /* posición absoluta a navegador */
+  top: 50px;      /* 50px debajo de borde de navegador */
+  left: 0;        /* ajusta a borde de navegador */
+  right: 0;
+  bottom: 0;
+  background: #76d073; /* verde si no hay mapa */
+}
